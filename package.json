@@ -24,7 +24,7 @@
   },
   "main": "lib/weak.js",
   "scripts": {
-    "test": "nyc mocha --expose-gc",
+    "test": "nyc mocha --node-option=expose-gc",
     "install": "node-gyp-build",
     "prebuild": "prebuildify --napi --tag-armv --tag-uv",
     "prepack": "prebuildify-ci download && ([ $(ls prebuilds | wc -l) = '5' ] || (echo 'Some prebuilds are missing'; exit 1))"
